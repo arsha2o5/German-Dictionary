@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dictionary — Learn German Efficiently</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="main-nav">
+        <ul>
+          <li><a id="homeBtn">Home</a></li>
+          <li><a href="#">Practice</a></li>
+          <li><a href="dictionary_page.html">Dictionary</a></li>
+        </ul>
+      </nav>
+      <div class="account">
+        <button class="account-btn" aria-label="Account">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z" fill="currentColor"/>
+            <path d="M2 22c0-3.314 4.477-6 10-6s10 2.686 10 6v0H2z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-wrap">
+      <section class="dictionary two-column">
+        <!-- Left: Vocabulary panel -->
+        <aside class="vocab-panel" id="vocabPanel">
+          <header class="vocab-header">
+            <h3>My Vocabulary</h3>
+            <div class="vocab-count" id="vocabCount">0</div>
+          </header>
+          <div class="vocab-list" id="vocabList" aria-live="polite">
+            <!-- words inserted here -->
+          </div>
+          <div class="vocab-search">
+            <input id="vocabSearch" type="search" placeholder="Search words or parts..." aria-label="Search vocabulary" />
+          </div>
+        </aside>
+
+        <!-- Right: Translation interface -->
+        <section class="dictionary-main">
+          <div class="dictionary-input-row">
+            <input id="wordInput" type="text" placeholder="Enter German word (e.g. Haus)" />
+            <button id="lookupBtn">Translate</button>
+            <button id="addVocabBtn" title="Add to my vocabulary">+</button>
+          </div>
+          
+          <div class="dictionary-results" id="results">
+            <div class="empty">Enter a German word below to see translation, gender and synonyms.</div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="src/dictionary.js"></script>
+  </body>
+  </html>
